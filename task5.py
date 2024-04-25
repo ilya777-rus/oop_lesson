@@ -3,18 +3,23 @@
 
 class Employe:
     def get_paid(self):
-        print("зарплата сотрудника")
+        return "зарплата сотрудника"
 
 class Manager(Employe):
     def __init__(self, salary):
         self.salary = salary
 
     def get_paid(self):
-        print("Зарплата менеджера", self.salary)
+        return f"Зарплата менеджера: {self.salary}"
 
 class Worker(Employe):
     def __init__(self, salary):
         self.salary = salary
 
     def get_paid(self):
-        print("Зарплата работника", self.salary)
+        return f"Зарплата работника: {self.salary}"
+
+m = Manager(222222)
+w = Worker(111)
+print(m.get_paid())
+print(w.get_paid())
